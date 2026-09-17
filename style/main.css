@@ -11,9 +11,57 @@ a{text-decoration:none;color:inherit}
 .announcement{background:#0c0c0c;color:#ead18e;text-align:center;padding:8px 15px;font-size:13px;letter-spacing:.4px}
 header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.logo{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;font-size:17px}
-.logo small{display:block;color:#c8a75d;font-size:9px;letter-spacing:2px;margin-top:2px}
-.logo-mark{width:43px;height:43px;border:2px solid var(--gold);border-radius:10px;display:grid;place-items:center;color:var(--gold);font-size:22px;font-weight:900}
+/* Logo Main Wrapper */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 17px;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.logo small {
+  display: block;
+  color: #c8a75d;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+/* Inline SVG Logo (Header) */
+.logo-svg {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Image-based Logo Container (Footer / Custom Logo Use) */
+.logo-mark {
+  width: 43px;
+  height: 43px;
+  border: 1.5px solid var(--gold);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Ensure Logo Images Fit Perfectly Inside .logo-mark */
+.logo-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+  display: block;
+}
 nav ul{display:flex;gap:25px;list-style:none;margin:0;padding:0;align-items:center}
 nav a{color:#ddd;font-size:14px;font-weight:600}
 nav a:hover{color:var(--gold)}
