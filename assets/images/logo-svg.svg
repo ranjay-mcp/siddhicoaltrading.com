@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Dark Industrial Background Gradient -->
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1115" />
+      <stop offset="50%" stop-color="#181B22" />
+      <stop offset="100%" stop-color="#090A0C" />
+    </linearGradient>
+
+    <!-- Amber Gold Gradient for Growth Arrow -->
+    <linearGradient id="amberGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+
+    <!-- Coal Facet Gradients -->
+    <linearGradient id="coalDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#374151" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    
+    <linearGradient id="coalMid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4B5563" />
+      <stop offset="100%" stop-color="#1F2937" />
+    </linearGradient>
+
+    <linearGradient id="coalLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6B7280" />
+      <stop offset="100%" stop-color="#374151" />
+    </linearGradient>
+
+    <!-- Metallic Text Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E5E7EB" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="100%" height="100%" fill="url(#bgGlow)" />
+
+  <g transform="translate(40, 25)">
+    <!-- LOGO MARK (Faceted Coal + Upward Gold Arrow) -->
+    <g filter="url(#dropShadow)">
+      <!-- Left & Bottom Coal Facets -->
+      <polygon points="120,200 60,130 120,60 145,100" fill="url(#coalLight)" />
+      <polygon points="60,130 120,200 120,230 40,150" fill="url(#coalDark)" />
+      <polygon points="120,200 180,220 120,230" fill="url(#coalMid)" />
+      <polygon points="120,200 155,160 180,220" fill="url(#coalDark)" />
+      <polygon points="120,60 145,100 120,135" fill="url(#coalMid)" />
+      <polygon points="120,135 145,100 155,160 120,200" fill="url(#coalDark)" />
+
+      <!-- Right & Top Amber Gold Arrow Facets -->
+      <polygon points="120,60 180,130 155,160" fill="url(#amberGrad)" opacity="0.9" />
+      <polygon points="180,130 200,80 155,160" fill="url(#amberGrad)" />
+      <polygon points="120,60 160,20 200,80" fill="url(#amberGrad)" />
+      <polygon points="160,20 200,80 180,130" fill="url(#amberGrad)" opacity="0.85" />
+    </g>
+
+    <!-- TYPOGRAPHY -->
+    <!-- Brand Name: SIDDHI -->
+    <text x="240" y="140" 
+          fill="url(#textGrad)" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Montserrat, sans-serif" 
+          font-weight="800" 
+          font-size="64" 
+          letter-spacing="4">SIDDHI</text>
+
+    <!-- Tagline: COAL TRADING -->
+    <text x="243" y="185" 
+          fill="#F59E0B" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Montserrat, sans-serif" 
+          font-weight="600" 
+          font-size="22" 
+          letter-spacing="10.5">COAL TRADING</text>
+
+    <!-- Domain Accent Line & Text -->
+    <line x1="243" y1="210" x2="680" y2="210" stroke="#374151" stroke-width="2" />
+    
+    <text x="243" y="235" 
+          fill="#9CA3AF" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+          font-weight="400" 
+          font-size="15" 
+          letter-spacing="2">siddhicoaltrading.com</text>
+  </g>
+</svg>
