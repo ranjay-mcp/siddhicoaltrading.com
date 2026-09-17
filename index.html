@@ -7,530 +7,92 @@
   <meta name="keywords" content="Siddhi Coal Trading, coal trader, coal supplier, Jharkhand coal, industrial coal supply, coal trading" />
   <meta name="theme-color" content="#111827" />
   <title>Siddhi Coal Trading | Reliable Coal Trading & Supply</title>
+<style>
+:root{
+  --coal:#151515; --coal-2:#222; --charcoal:#303030; --gold:#d6a84f;
+  --gold-light:#f1d28a; --cream:#f7f4ed; --white:#fff; --muted:#a9adb3;
+  --line:rgba(255,255,255,.10); --shadow:0 20px 60px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:#202124;background:var(--cream);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.announcement{background:#0c0c0c;color:#ead18e;text-align:center;padding:8px 15px;font-size:13px;letter-spacing:.4px}
+header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;font-size:17px}
+.logo small{display:block;color:#c8a75d;font-size:9px;letter-spacing:2px;margin-top:2px}
+.logo-mark{width:43px;height:43px;border:2px solid var(--gold);border-radius:10px;display:grid;place-items:center;color:var(--gold);font-size:22px;font-weight:900}
+nav ul{display:flex;gap:25px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{color:#ddd;font-size:14px;font-weight:600}
+nav a:hover{color:var(--gold)}
+.nav-cta{border:1px solid var(--gold);padding:10px 16px;border-radius:8px;color:#f2d48d!important}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-size:27px}
 
-  <style>
-    :root {
-      --dark: #101418;
-      --dark-2: #171d22;
-      --coal: #222a31;
-      --gold: #e4a52b;
-      --gold-2: #f5c45a;
-      --cream: #f7f4ed;
-      --white: #ffffff;
-      --muted: #66707a;
-      --line: #e7e4dc;
-      --green: #2f6b4f;
-      --shadow: 0 18px 50px rgba(15, 23, 42, .10);
-      --radius: 18px;
-      --max: 1180px;
-    }
+.hero-banner{position:relative;height:650px;overflow:hidden;background:#111}
+.hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s ease;background-position:center;background-size:cover}
+.hero-slide.active{opacity:1;visibility:visible}
+.hero-slide-1{background-image:url('/assets/images/hero-1.jpeg')}
+.hero-slide-2{background-image:url('/assets/images/hero-2.jpeg')}
+.hero-slide-3{background-image:url('/assets/images/hero-3.jpeg')}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--dark);
-      background: #fff;
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { width: min(var(--max), calc(100% - 40px)); margin: auto; }
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.90) 0%,rgba(10,10,10,.68) 46%,rgba(10,10,10,.25) 100%)}
+.hero-banner-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;color:#fff;padding-bottom:40px}
+.hero-banner-content h1{font-size:clamp(43px,6vw,76px);line-height:1.02;margin:17px 0}
+.hero-banner-content h1 span{color:var(--gold-light)}
+.hero-banner-content p{max-width:650px;font-size:18px;color:#e3e3e3}
+.hero-arrow{position:absolute;z-index:5;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(0,0,0,.35);color:#fff;font-size:34px;line-height:1;cursor:pointer}
+.hero-arrow:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+.hero-prev{left:25px}.hero-next{right:25px}
+.hero-dots{position:absolute;z-index:5;left:50%;bottom:30px;transform:translateX(-50%);display:flex;gap:9px}
+.hero-dot{width:10px;height:10px;border:1px solid #fff;border-radius:50%;background:transparent;cursor:pointer;padding:0}
+.hero-dot.active{background:var(--gold);border-color:var(--gold);width:28px;border-radius:8px}
+.intro{background:#fff}
+.intro-grid,.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.intro-image{min-height:480px;border-radius:18px;background:
+linear-gradient(0deg,rgba(0,0,0,.7),transparent 60%),
+url('https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=85') center/cover;position:relative;box-shadow:var(--shadow)}
+.image-label{position:absolute;left:25px;bottom:25px;color:#fff}.image-label strong{display:block;font-size:21px}.image-label span{font-size:13px;color:#ddd}
+.intro-copy p,.section-head p{color:#656a70}
+.checks{list-style:none;padding:0;margin:25px 0}.checks li{margin:12px 0;font-weight:650}.check{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#efe0b9;color:#7b5a14;margin-right:10px}
+.section-head{max-width:720px;margin-bottom:40px}.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{background:#fff;border:1px solid #e6e1d6;border-radius:14px;padding:30px;transition:.25s;box-shadow:0 8px 30px rgba(0,0,0,.04)}
+.service:hover{transform:translateY(-5px);box-shadow:0 18px 45px rgba(0,0,0,.10);border-color:#dcc28a}
+.service-icon{width:45px;height:45px;border-radius:10px;background:#eee4cb;color:#8b681d;display:grid;place-items:center;font-size:20px}
+.service h3{margin:18px 0 7px}.service p{color:#6b6f73;font-size:14px}
+.process{background:#171717;color:#fff}.process h2{color:#fff}.process .section-head p{color:#aaa}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{padding:25px;border-top:2px solid #7e6229;background:#202020}.step-no{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:1.5px}.step h3{margin:12px 0 7px}.step p{color:#aaa;font-size:14px}
+.feature-list{display:grid;gap:20px}.feature{display:flex;gap:18px;align-items:flex-start}.feature-number{font-size:13px;color:#8c6b22;font-weight:900;border:1px solid #d8c28f;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;flex:none}.feature p{color:#6c7075;margin:3px 0}
+.quote-box{background:#171717;color:#fff;padding:48px;border-radius:18px;box-shadow:var(--shadow)}.quote-mark{font-size:55px;color:var(--gold);line-height:.7}.quote-box blockquote{font-size:28px;font-weight:800;line-height:1.25;margin:15px 0 22px}.quote-box p{color:#bcbcbc}
+.cta-wrap{padding:35px 0 90px}.cta{border-radius:20px;overflow:hidden;background:
+linear-gradient(90deg,rgba(20,20,20,.96),rgba(20,20,20,.72)),
+url('https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=1600&q=85') center/cover;color:#fff;padding:65px}.cta h2{color:#fff}.cta p{color:#d0d0d0;max-width:650px}
+footer{background:#0d0d0d;color:#fff;padding:60px 0 25px;border-top:3px solid #b28a38}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}.footer-brand p{color:#999;max-width:360px;font-size:14px}.footer-grid h4{color:#e1bf72;margin:0 0 15px}.footer-links{list-style:none;padding:0;margin:0}.footer-links li{margin:8px 0;color:#aaa;font-size:14px}.footer-links a:hover{color:var(--gold)}.contact-line{color:#aaa;font-size:14px;margin:8px 0}.contact-line strong{color:#ddd}
+.social-title{margin-top:25px!important}.footer-social{display:flex;gap:10px;margin-top:12px}.footer-social a{width:40px;height:40px;border:1px solid #444;border-radius:50%;display:grid;place-items:center;color:#ddd;font-size:17px;transition:.2s}.footer-social a:hover{border-color:var(--gold);background:var(--gold);color:#111;transform:translateY(-3px)}
+.gst{margin-top:17px;font-size:13px;color:#aaa}.gst strong{color:#eee}
+.copyright{border-top:1px solid #292929;margin-top:35px;padding-top:20px;display:flex;justify-content:space-between;gap:15px;color:#777;font-size:12px}
+.whatsapp{position:fixed;right:22px;bottom:22px;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:25px;z-index:60;box-shadow:0 8px 25px rgba(0,0,0,.3)}
+@media(max-width:900px){
+ .hero-banner{height:620px}.hero-arrow{width:42px;height:42px;font-size:29px}.hero-prev{left:12px}.hero-next{right:12px}
 
-    /* Announcement */
-    .announcement {
-      background: var(--gold);
-      color: #1c1609;
-      font-size: 13px;
-      font-weight: 700;
-      text-align: center;
-      padding: 8px 15px;
-    }
-
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(16,20,24,.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .nav {
-      height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: #fff;
-      font-weight: 900;
-      letter-spacing: -.4px;
-      font-size: 21px;
-    }
-    .logo-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 11px;
-      display: grid;
-      place-items: center;
-      color: #111;
-      background: linear-gradient(135deg, var(--gold-2), var(--gold));
-      box-shadow: 0 7px 20px rgba(228,165,43,.25);
-      font-size: 22px;
-    }
-    .logo small {
-      display: block;
-      color: #aeb6bd;
-      font-size: 9px;
-      letter-spacing: 2px;
-      font-weight: 700;
-      margin-top: -2px;
-    }
-    nav ul {
-      display: flex;
-      align-items: center;
-      list-style: none;
-      gap: 28px;
-    }
-    nav a {
-      color: #e7ebee;
-      font-size: 14px;
-      font-weight: 650;
-      transition: .2s;
-    }
-    nav a:hover { color: var(--gold-2); }
-    .nav-cta {
-      padding: 11px 18px;
-      border-radius: 9px;
-      background: var(--gold);
-      color: #15120b !important;
-      font-weight: 800 !important;
-    }
-    .menu-btn {
-      display: none;
-      border: 0;
-      background: transparent;
-      color: #fff;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    /* Hero */
-    .hero {
-      min-height: 690px;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(8,12,15,.95) 0%, rgba(8,12,15,.82) 42%, rgba(8,12,15,.32) 100%),
-        url("https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=2200&q=85") center/cover;
-      display: flex;
-      align-items: center;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto 0 0;
-      height: 130px;
-      background: linear-gradient(transparent, rgba(8,12,15,.45));
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
-      padding: 90px 0 125px;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--gold-2);
-      text-transform: uppercase;
-      letter-spacing: 2.4px;
-      font-weight: 850;
-      font-size: 12px;
-      margin-bottom: 17px;
-    }
-    .eyebrow::before {
-      content: "";
-      width: 30px;
-      height: 2px;
-      background: var(--gold);
-    }
-    h1 {
-      color: #fff;
-      font-size: clamp(43px, 6vw, 76px);
-      line-height: 1.02;
-      letter-spacing: -2.7px;
-      margin-bottom: 24px;
-    }
-    h1 span { color: var(--gold-2); }
-    .hero p {
-      color: #d7dde1;
-      max-width: 650px;
-      font-size: 18px;
-      line-height: 1.75;
-      margin-bottom: 34px;
-    }
-    .hero-buttons { display: flex; flex-wrap: wrap; gap: 13px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 50px;
-      padding: 0 21px;
-      border-radius: 9px;
-      font-weight: 800;
-      font-size: 14px;
-      border: 1px solid transparent;
-      transition: .22s;
-    }
-    .btn-primary { background: var(--gold); color: #16120a; }
-    .btn-primary:hover { transform: translateY(-2px); background: var(--gold-2); }
-    .btn-outline { border-color: rgba(255,255,255,.35); color: #fff; background: rgba(255,255,255,.05); }
-    .btn-outline:hover { background: rgba(255,255,255,.12); }
-
-    /* Floating stats */
-    .hero-card {
-      position: absolute;
-      right: 5%;
-      bottom: 72px;
-      z-index: 3;
-      width: 310px;
-      background: rgba(255,255,255,.95);
-      border-radius: 16px;
-      padding: 23px;
-      box-shadow: 0 25px 70px rgba(0,0,0,.28);
-    }
-    .hero-card .tag {
-      color: var(--green);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 900;
-    }
-    .hero-card h3 { font-size: 21px; margin: 5px 0 8px; }
-    .hero-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
-    .hero-card-line {
-      height: 1px;
-      background: var(--line);
-      margin: 16px 0;
-    }
-    .mini {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .mini strong { color: var(--dark); }
-
-    /* Sections */
-    section { padding: 92px 0; }
-    .section-head {
-      max-width: 720px;
-      margin-bottom: 45px;
-    }
-    .section-kicker {
-      color: #a47418;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 900;
-      font-size: 11px;
-      margin-bottom: 9px;
-    }
-    h2 {
-      font-size: clamp(31px, 4vw, 46px);
-      line-height: 1.1;
-      letter-spacing: -1.5px;
-      margin-bottom: 14px;
-    }
-    .section-head p { color: var(--muted); max-width: 640px; }
-
-    /* Intro */
-    .intro { background: var(--cream); }
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1.02fr .98fr;
-      gap: 70px;
-      align-items: center;
-    }
-    .intro-image {
-      min-height: 500px;
-      border-radius: 24px;
-      overflow: hidden;
-      position: relative;
-      background: url("https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1300&q=85") center/cover;
-      box-shadow: var(--shadow);
-    }
-    .intro-image::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(17,24,39,.15), rgba(17,24,39,.55));
-    }
-    .image-label {
-      position: absolute;
-      left: 25px;
-      bottom: 25px;
-      right: 25px;
-      color: #fff;
-      background: rgba(10,15,18,.78);
-      backdrop-filter: blur(10px);
-      padding: 18px;
-      border-radius: 13px;
-      border: 1px solid rgba(255,255,255,.14);
-    }
-    .image-label strong { display: block; font-size: 18px; }
-    .image-label span { color: #c6cdd2; font-size: 12px; }
-    .intro-copy h2 { max-width: 550px; }
-    .intro-copy > p { color: var(--muted); margin: 18px 0 24px; }
-    .checks { list-style: none; display: grid; gap: 12px; margin-bottom: 28px; }
-    .checks li {
-      display: flex;
-      align-items: flex-start;
-      gap: 11px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .check {
-      width: 22px; height: 22px; min-width: 22px;
-      border-radius: 50%;
-      display: grid; place-items: center;
-      background: #e7f1eb;
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 900;
-      margin-top: 1px;
-    }
-
-    /* Services */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-    .service {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-      background: #fff;
-      transition: .25s;
-    }
-    .service:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: #ddd4bf; }
-    .service-icon {
-      width: 51px;
-      height: 51px;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      background: #f7ecd3;
-      color: #8b6110;
-      font-size: 23px;
-      margin-bottom: 20px;
-    }
-    .service h3 { font-size: 19px; margin-bottom: 9px; }
-    .service p { color: var(--muted); font-size: 14px; line-height: 1.7; }
-
-    /* Process */
-    .process { background: var(--dark); color: #fff; }
-    .process .section-kicker { color: var(--gold-2); }
-    .process .section-head p { color: #9ea8b0; }
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 18px;
-      overflow: hidden;
-    }
-    .step {
-      background: var(--dark);
-      padding: 30px 25px;
-      min-height: 225px;
-    }
-    .step-no {
-      color: var(--gold-2);
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: 900;
-      margin-bottom: 34px;
-    }
-    .step h3 { font-size: 18px; margin-bottom: 8px; }
-    .step p { color: #9ea8b0; font-size: 13px; line-height: 1.65; }
-
-    /* Why us */
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-    .feature-list { display: grid; gap: 13px; }
-    .feature {
-      display: flex;
-      gap: 17px;
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: #fff;
-    }
-    .feature-number {
-      color: #9a6e19;
-      font-size: 13px;
-      font-weight: 900;
-      min-width: 28px;
-    }
-    .feature h3 { font-size: 16px; margin-bottom: 3px; }
-    .feature p { color: var(--muted); font-size: 13px; }
-    .quote-box {
-      background: var(--cream);
-      border-radius: 23px;
-      padding: 40px;
-      border: 1px solid #eee8d8;
-    }
-    .quote-box .quote-mark { color: var(--gold); font-size: 54px; line-height: .6; }
-    .quote-box blockquote {
-      font-size: 24px;
-      line-height: 1.35;
-      font-weight: 800;
-      letter-spacing: -.5px;
-      margin: 18px 0 22px;
-    }
-    .quote-box p { color: var(--muted); font-size: 13px; }
-
-    /* CTA */
-    .cta-wrap { padding-top: 15px; padding-bottom: 92px; }
-    .cta {
-      border-radius: 24px;
-      padding: 55px;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(105deg, rgba(13,18,21,.97), rgba(13,18,21,.75)),
-        url("https://images.unsplash.com/photo-1578496481443-2c6e3e2b9e47?auto=format&fit=crop&w=1800&q=80") center/cover;
-    }
-    .cta::after {
-      content: "";
-      position: absolute;
-      width: 300px; height: 300px;
-      border-radius: 50%;
-      background: rgba(228,165,43,.13);
-      right: -100px; top: -120px;
-    }
-    .cta-content { position: relative; z-index: 2; max-width: 750px; }
-    .cta h2 { color: #fff; margin-bottom: 13px; }
-    .cta p { color: #c6cdd2; margin-bottom: 24px; max-width: 620px; }
-
-    /* Footer */
-    footer {
-      background: #0b0f12;
-      color: #dfe4e7;
-      padding: 62px 0 25px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr .8fr .8fr 1fr;
-      gap: 40px;
-      padding-bottom: 42px;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
-    .footer-brand p {
-      color: #8e989f;
-      font-size: 13px;
-      max-width: 350px;
-      margin-top: 15px;
-    }
-    footer h4 { color: #fff; font-size: 14px; margin-bottom: 16px; }
-    .footer-links { list-style: none; display: grid; gap: 9px; }
-    .footer-links a { color: #8e989f; font-size: 13px; }
-    .footer-links a:hover { color: var(--gold-2); }
-    .contact-line { color: #8e989f; font-size: 13px; margin-bottom: 9px; }
-    .contact-line strong { color: #e8ecee; }
-    .copyright {
-      padding-top: 22px;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      color: #6e777d;
-      font-size: 11px;
-    }
-
-    /* Floating WhatsApp */
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 1200;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #25D366;
-      color: #fff;
-      font-weight: 900;
-      box-shadow: 0 12px 30px rgba(0,0,0,.25);
-      font-size: 25px;
-    }
-
-    /* Mobile */
-    @media (max-width: 950px) {
-      .hero-card { display: none; }
-      .intro-grid, .why-grid { grid-template-columns: 1fr; gap: 35px; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .process-grid { grid-template-columns: repeat(2, 1fr); }
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
-      .intro-image { min-height: 420px; }
-    }
-
-    @media (max-width: 720px) {
-      .container { width: min(var(--max), calc(100% - 28px)); }
-      .nav { height: 68px; }
-      nav {
-        display: none;
-        position: absolute;
-        left: 14px;
-        right: 14px;
-        top: 73px;
-        background: #141a1f;
-        border: 1px solid rgba(255,255,255,.1);
-        border-radius: 14px;
-        padding: 15px;
-      }
-      nav.open { display: block; }
-      nav ul { flex-direction: column; align-items: stretch; gap: 2px; }
-      nav a { display: block; padding: 12px; border-radius: 8px; }
-      nav a:hover { background: rgba(255,255,255,.05); }
-      .nav-cta { text-align: center; margin-top: 5px; }
-      .menu-btn { display: block; }
-      .hero { min-height: 680px; }
-      .hero-content { padding: 75px 0 100px; }
-      h1 { letter-spacing: -1.8px; }
-      .hero p { font-size: 16px; }
-      section { padding: 68px 0; }
-      .services-grid, .process-grid { grid-template-columns: 1fr; }
-      .intro-image { min-height: 340px; }
-      .cta { padding: 35px 25px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-      .copyright { flex-direction: column; }
-    }
-  </style>
+ .hero{min-height:720px}.hero-card{position:relative;right:auto;bottom:auto;margin:0 auto 45px;width:min(90%,360px)}.hero{display:block;padding-top:30px}
+ .intro-grid,.why-grid{grid-template-columns:1fr;gap:35px}.services-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}
+ nav{display:none}nav.open{display:block;position:absolute;top:76px;left:0;right:0;background:#151515;padding:20px}.nav nav.open ul{display:flex;flex-direction:column;align-items:flex-start}.menu-btn{display:block}
+}
+@media(max-width:600px){
+ section{padding:65px 0}.hero-content{padding:45px 0 30px}.hero-card{margin-bottom:30px}.services-grid,.process-grid,.footer-grid{grid-template-columns:1fr}.cta{padding:38px 25px}.copyright{flex-direction:column}
+}
+</style>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-
 <body>
 
   <div class="announcement">
     Reliable Coal Trading & Supply Solutions • Enquire for Your Requirement
   </div>
 
+  <!-- HEADER -->
   <header>
     <div class="container nav">
       <a href="index.html" class="logo" aria-label="Siddhi Coal Trading Home">
@@ -542,7 +104,6 @@
       </a>
 
       <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
-
       <nav id="mainNav">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -554,21 +115,18 @@
       </nav>
     </div>
   </header>
-
   <main>
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-          <div class="eyebrow">Trusted Coal Trading Partner</div>
-          <h1>Powering business with <span>reliable coal supply.</span></h1>
+    <!-- HERO BANNER -->
+    <section class="hero-banner" id="home">
+      <div class="hero-slide hero-slide-1 active">
+        <div class="hero-overlay"></div>
+        <div class="container hero-banner-content">
+          <div class="eyebrow">Siddhi Coal Trading</div>
+          <h1>Reliable Coal Supply.<br><span>Built for Business.</span></h1>
           <p>
-            Siddhi Coal Trading provides sourcing, trading and supply support
-            for businesses looking for dependable coal solutions, transparent
-            communication and professional service.
+            Professional coal sourcing, trading and supply coordination
+            for industrial and commercial requirements.
           </p>
-
           <div class="hero-buttons">
             <a class="btn btn-primary" href="#contact">Request a Quote →</a>
             <a class="btn btn-outline" href="#services">Explore Services</a>
@@ -576,16 +134,43 @@
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="tag">Our approach</div>
-        <h3>Supply built around your requirement.</h3>
-        <p>
-          We focus on understanding specification, quantity, delivery
-          requirements and commercial terms before every supply.
-        </p>
-        <div class="hero-card-line"></div>
-        <div class="mini"><span>Business</span><strong>Coal Trading</strong></div>
-        <div class="mini"><span>Service</span><strong>End-to-End Support</strong></div>
+      <div class="hero-slide hero-slide-2">
+        <div class="hero-overlay"></div>
+        <div class="container hero-banner-content">
+          <div class="eyebrow">Coal Sourcing • Trading • Supply</div>
+          <h1>From Source to<br><span>Supply.</span></h1>
+          <p>
+            Requirement-focused solutions covering coal sourcing,
+            commercial coordination and delivery planning.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact">Discuss Your Requirement →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide hero-slide-3">
+        <div class="hero-overlay"></div>
+        <div class="container hero-banner-content">
+          <div class="eyebrow">Professional Coal Trading Partner</div>
+          <h1>Powering Your<br><span>Supply Chain.</span></h1>
+          <p>
+            Clear communication, dependable coordination and practical
+            coal trading support for your business.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact">Get in Touch →</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="hero-arrow hero-prev" aria-label="Previous banner">‹</button>
+      <button class="hero-arrow hero-next" aria-label="Next banner">›</button>
+
+      <div class="hero-dots" aria-label="Hero banner navigation">
+        <button class="hero-dot active" aria-label="Banner 1"></button>
+        <button class="hero-dot" aria-label="Banner 2"></button>
+        <button class="hero-dot" aria-label="Banner 3"></button>
       </div>
     </section>
 
@@ -844,6 +429,19 @@
           <div class="contact-line"><strong>Email:</strong> info@siddhicoaltrading.com</div>
           <div class="contact-line"><strong>Phone:</strong> +91 6200159525</div>
           <div class="contact-line"><strong>Location:</strong> Jharkhand, India</div>
+
+          <div class="gst">
+            <strong>GSTIN:</strong> 123456789
+          </div>
+
+          <h4 class="social-title">Follow Us</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/916200159525" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
       </div>
 
@@ -854,9 +452,43 @@
     </div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/6200159525" target="_blank" rel="noopener" aria-label="WhatsApp">⌕</a>
+  <a class="whatsapp" href="https://wa.me/916200159525" target="_blank" rel="noopener" aria-label="WhatsApp">⌕</a>
 
   <script>
+    const heroSlides = document.querySelectorAll(".hero-slide");
+    const heroDots = document.querySelectorAll(".hero-dot");
+    let heroIndex = 0;
+    let heroTimer;
+
+    function showHero(index) {
+      heroIndex = (index + heroSlides.length) % heroSlides.length;
+      heroSlides.forEach((slide, i) => slide.classList.toggle("active", i === heroIndex));
+      heroDots.forEach((dot, i) => dot.classList.toggle("active", i === heroIndex));
+    }
+
+    function nextHero() {
+      showHero(heroIndex + 1);
+      resetHeroTimer();
+    }
+
+    function prevHero() {
+      showHero(heroIndex - 1);
+      resetHeroTimer();
+    }
+
+    function resetHeroTimer() {
+      clearInterval(heroTimer);
+      heroTimer = setInterval(() => showHero(heroIndex + 1), 5500);
+    }
+
+    document.querySelector(".hero-next").addEventListener("click", nextHero);
+    document.querySelector(".hero-prev").addEventListener("click", prevHero);
+    heroDots.forEach((dot, i) => dot.addEventListener("click", () => {
+      showHero(i);
+      resetHeroTimer();
+    }));
+    resetHeroTimer();
+
     function toggleMenu() {
       document.getElementById("mainNav").classList.toggle("open");
     }
