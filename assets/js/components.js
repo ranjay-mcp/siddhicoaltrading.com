@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // Load Header D:\siddhicoaltrading.com\components\footer.html
-    fetch("https://siddhicoaltrading.com/components/header.html")
+    fetch("components/header.html")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Unable to load header.html");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Load Footer
-    fetch("https://siddhicoaltrading.com/components/footer.html")
+    fetch("components/footer.html")
         .then(response => {
             if (!response.ok) {
                 throw new Error("Unable to load footer.html");
